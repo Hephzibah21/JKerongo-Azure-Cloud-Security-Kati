@@ -1,4 +1,5 @@
 # JKerongo-Azure-Cloud-Security-Kati
+<<<<<<< HEAD
 Ansible YAML > Cloud Security, Bash Scripts > Linux System Administration Unit.
 
 
@@ -99,3 +100,6 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+=======
+  Ansible YAML > Cloud Security, Bash Scripts > Linux System Administration Unit.
+>>>>>>> 4e5f5ce338ba5b5d132ef6c6979ee6b249546b36
