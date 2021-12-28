@@ -126,7 +126,7 @@ SSH into the control node and follow the steps below:
 
 - Which URL do you navigate to in order to check that the ELK server is running?
 
-- > www.publicip:5601 (Kibana)
+- > www.PublicIP:5601 (Kibana)
 
 
 - The specific commands the user will need to run to download the playbook, update the files, 
