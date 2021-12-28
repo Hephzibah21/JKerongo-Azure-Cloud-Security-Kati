@@ -48,9 +48,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function              | IP Address | Operating System |
 |----------|----------             |------------|------------------|
 | Jump Box | Gateway               | 10.0.0.4   | Ubuntu Linux     |
-| Web-1     | Server                | 10.0.0.5   | Ubuntu Linux     |
-| web-2     | Server                | 10.0.0.6   | Ubuntu Linux     |
-| Web-3     | Server                | 10.0.0.7   | Ubuntu Linux     |
+| Web-1    | Server                | 10.0.0.5   | Ubuntu Linux     |
+| web-2    | Server                | 10.0.0.6   | Ubuntu Linux     |
+| Web-3    | Server                | 10.0.0.7   | Ubuntu Linux     |
 | ELK      | ElasticSearch Stack   | 10.1.0.4   | Ubuntu Linux     |
 ### Access Policies
 
