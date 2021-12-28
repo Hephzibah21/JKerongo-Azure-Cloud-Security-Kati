@@ -12,8 +12,8 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the configulation file may be used to install only certain pieces of it, such as Filebeat.
 
-JKerongo-Azure-Cloud-Security-Kati 
-
+- [ELK Installation](https://github.com/Hephzibah21/JKerongo-Azure-Cloud-Security-Kati/Elk_stack_Deployment/blop/main/Ansible/install-elk.yml)
+- [Filebeat & Metrickbeat Installation](https://github.com/Hephzibah21/JKerongo-Azure-Cloud-Security-Kati/Elk_stack_Deployment/blop/main/Ansible/filebeat-metricbeat-playbook.yml) 
 
 This document contains the following details:
 - Description of the Topology
@@ -66,7 +66,7 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 10.0.0.4             |
-| DVWA-VM1 | NO                  | 10.0.0.4             |
+| web-1    | NO                  | 10.0.0.4             |
 | Web-2    | NO                  | 10.0.0.4             |
 | Web-3    | No                  | 10.0.0.4             |
 
@@ -97,7 +97,7 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 
-- Example Winlogbeat collects Windows logs, which we use to track user logon events, etc. Filebeat collects the changes done (screenshot: Images/Filebeat) Metric beat collects metrics and statistics screenshot: Images/Metricbeat)
+- Example Winlogbeat collects Windows logs, which we use to track user logon events, etc. Filebeat collects the changes done (screenshot: Images/Filebeat) Metric beat collects metrics and statistics screenshot: images/Metricbeat)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
