@@ -11,6 +11,8 @@ The files in this repository were used to configure the network depicted below.
 ![](images/NetworkDiagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the configulation file may be used to install only certain pieces of it, such as Filebeat.
+- filebeat-playbook.yml 
+- filebeat-configuration.yml
 
 - [ELK Installation](https://github.com/Hephzibah21/JKerongo-Azure-Cloud-Security-Kati/Elk_stack_Deployment/blop/main/Ansible/install-elk.yml)
 - [Filebeat & Metrickbeat Installation](https://github.com/Hephzibah21/JKerongo-Azure-Cloud-Security-Kati/Elk_stack_Deployment/blop/main/Ansible/filebeat-metricbeat-playbook.yml) 
@@ -33,25 +35,25 @@ This document contains the following details:
 
 - Load Balancers security aspects are:
 - can add additional layers of security to your website without any of your application changes, can minimize the probability of downtime if one server breaks down and
-can protect the system from DDoS attacks.Load balancers conduct continuous health checks on servers to ensure they can handle requests.
+can protect the system from DDoS attacks by shifting attack traffic from the corporate server to a public cloud provider.
 
 - The advantage of a jump box is to give access to the user from a single node that can be secured and monitored. The Jump box (gateway box on the diagram) is a secure VM that all Security Group/Admins first connect to before launching any administrative task/use as the first point to connect to other servers or untrusted environments. This is the only VM/Server which has access to the outside Network that enables the System Admin securely connect to the cloud protecting it from direct exposure attack vulnerability. The gateway accepts secure connection only--Port 22 using ssh key
 
 - Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resouces.
-- restricting direct access of the web servers from the internet/outside to the network.
-
-- Metricbeat takes the metrics and statistics that collects and ships them to the output you specify
+- It also restricts direct access of the web servers from the internet/outside to the network.
+- filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+- Metricbeat takes the metrics and statistics that it collects and ships them to the output you specify such as Elasticsearch or Logstash
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function              | IP Address | Operating System |
 |----------|----------             |------------|------------------|
-| Jump Box | Gateway               | 10.0.0.4   | Ubuntu Linux     |
-| Web-1    | Server                | 10.0.0.5   | Ubuntu Linux     |
-| web-2    | Server                | 10.0.0.6   | Ubuntu Linux     |
-| Web-3    | Server                | 10.0.0.7   | Ubuntu Linux     |
-| ELK      | ElasticSearch Stack   | 10.1.0.4   | Ubuntu Linux     |
+| Jump Box | Gateway               | 10.0.0.4   |  Linux     |
+| Web-1    | Server                | 10.0.0.5   |  Linux     |
+| web-2    | Server                | 10.0.0.6   |  Linux     |
+| Web-3    | Server                | 10.0.0.7   |  Linux     |
+| ELK      | ElasticSearch Stack   | 10.1.0.4   |  Linux     |
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
