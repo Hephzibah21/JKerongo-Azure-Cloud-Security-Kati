@@ -11,8 +11,6 @@ The files in this repository were used to configure the network depicted below.
 ![](images/NetworkDiagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the configulation file may be used to install only certain pieces of it, such as Filebeat.
-- filebeat-playbook.yml 
-- filebeat-configuration.yml
 
 - [ELK Installation](https://github.com/Hephzibah21/JKerongo-Azure-Cloud-Security-Kati/Elk_stack_Deployment/blop/main/Ansible/install-elk.yml)
 - [Filebeat & Metrickbeat Installation](https://github.com/Hephzibah21/JKerongo-Azure-Cloud-Security-Kati/Elk_stack_Deployment/blop/main/Ansible/filebeat-metricbeat-playbook.yml) 
@@ -45,7 +43,6 @@ can protect the system from DDoS attacks by shifting attack traffic from the cor
 - Metricbeat takes the metrics and statistics that it collects and ships them to the output you specify such as Elasticsearch or Logstash
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function              | IP Address | Operating System |
 |----------|----------             |------------|------------------|
@@ -87,7 +84,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![](images/MetrickDocker.png)
+![](images/Docker_PS.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
