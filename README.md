@@ -132,5 +132,3 @@ SSH into the control node and follow the steps below:
 
 etc. ansible-playbook filebeat-playbook.yml
  
-  Ansible YAML > Cloud Security, Bash Scripts > Linux System Administration Unit.
->>>>>>> 4e5f5ce338ba5b5d132ef6c6979ee6b249546b36
