@@ -12,7 +12,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the configulation file may be used to install only certain pieces of it, such as Filebeat.
 
-- [ELK Installation](https://github.com/Hephzibah21/JKerongo-Azure-Cloud-Security-Kati/Elk_stack_Deployment/blop/main/Ansible/install-elk.yml)
+- [ELK Installation](https://github.com/Hephzibah21/JKerongo-Azure-Cloud-Security-Kati/blob/main/ansible/elk.yml)
 - [Filebeat & Metrickbeat Installation](https://github.com/Hephzibah21/JKerongo-Azure-Cloud-Security-Kati/Elk_stack_Deployment/blop/main/Ansible/filebeat-metricbeat-playbook.yml) 
 
 This document contains the following details:
@@ -76,12 +76,11 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
-- > Install: docker.io
-- > Install: python-pip
-- > Install: docker
+- > install: docker.io
+- > install: python-pip
+- > install: docker
 - > Command: sysctl -w vm.max_map_count=262144
-- > Launch docker container: elk
-
+- > launch docker container: elk
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![](images/Docker_PS.png)
