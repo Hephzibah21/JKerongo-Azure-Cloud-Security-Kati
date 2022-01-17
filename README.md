@@ -81,6 +81,10 @@ The playbook implements the following tasks:
 - > install: docker
 - > Command: sysctl -w vm.max_map_count=262144
 - > launch docker container: elk
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1a53905e8070a9c05e3e7587d27e58793672b2f4
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![](images/Docker_PS.png)
