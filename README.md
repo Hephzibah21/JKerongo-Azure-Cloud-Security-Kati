@@ -32,10 +32,10 @@ This document contains the following details:
 - Load balancers conduct continuous health checks on servers to ensure they can handle requests.
 
 - Load Balancers security aspects are:
-- can add additional layers of security to your website without any of your application changes, can minimize the probability of downtime if one server breaks down and
+- Can add additional layers of security to your website without any of your application changes, can minimize the probability of downtime if one server breaks down and
 can protect the system from DDoS attacks by shifting attack traffic from the corporate server to a public cloud provider.
 
-- The advantage of a jump box is to give access to the user from a single node that can be secured and monitored. The Jump box (gateway box on the diagram) is a secure VM that all Security Group/Admins first connect to before launching any administrative task/use as the first point to connect to other servers or untrusted environments. This is the only VM/Server which has access to the outside Network that enables the System Admin securely connect to the cloud protecting it from direct exposure attack vulnerability. The gateway accepts secure connection only--Port 22 using ssh key
+- The advantage of a jump box is to give access to the user from a single node that can be secured and monitored. The Jump box (gateway box on the diagram) is a secure VM that all Security Group/Admins first connect to before launching any administrative task/use as the first point to connect to other servers or untrusted environments. This is the only VM/Server which has access to the outside Network that enables the system admin securely connect to the cloud protecting it from direct exposure attack vulnerability. The gateway accepts secure connection only on port 22 using ssh key.
 
 - Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resouces.
 - It also restricts direct access of the web servers from the internet/outside to the network.
@@ -56,7 +56,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the gateway jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
--  IP addresses 10.0.0.4
+-  IP addresses: my public IP.
 
 - Machines within the network can only be accessed by ssh using an ssh key and from the gateway VM.
 
@@ -64,14 +64,14 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 10.0.0.4             |
+| Jump Box | Yes                 | My public IP Address |
 | web-1    | NO                  | 10.0.0.4             |
 | Web-2    | NO                  | 10.0.0.4             |
 | Web-3    | No                  | 10.0.0.4             |
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because the setup is fast automated and reusable. This enables a rapid deployment of the essential component of the ELK subsystems. Using Ansible also eliminates error and misconfiguration.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because the setup is fast, automated and reusable. This enables a rapid deployment of the essential component of the ELK subsystems. Using Ansible also eliminates error and misconfiguration.
 - The main advantage is that you can put commands into multiple servers from a single playbook
 
 The playbook implements the following tasks:
@@ -91,31 +91,31 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- the machines monitoring are: DVWA-VM1 10.0.0.5 VM2 10.0.0.6, VM3 10.0.0.7
+- The machines being monitored are: DVWA-VM1 10.0.0.5, VM2 10.0.0.6, VM3 10.0.0.7
 
 
 We have installed the following Beats on these machines:
-- Beats successfully installed Filebeat and metricbeat
+- Beats successfully installed Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 
-- Example Winlogbeat collects Windows logs, which we use to track user logon events, etc. Filebeat collects the changes done (screenshot: Images/Filebeat) Metric beat collects metrics and statistics screenshot: images/Metricbeat)
+- Example Winlogbeat collects Windows logs, which we use to track user logon events, etc. Filebeat collects the changes done Metric beat collects metrics and statistics 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
 - > Copy the filebeat configuration file to Ansible node.
-- > Update the configulation file to include the IP address of the ELK server component you want to sent the log to
+- > Update the configulation file to include the IP address of the ELK server component you want to send the log to
 - > Run the playbook, and navigate to the portal of the ELK servers (web console) to check that the installation worked as expected.
 
 - Which file is the playbook? 
 
-- > Filebeat configuration file
+- > Filebeat-&-Metricbeat.yml
 
 - Where do you copy it?
 
-- > /etc/ansible/file/filebeat-configuration.yml
+- > /etc/ansible/Filebeat-&-Metricbeat.yml
 
 - Which file do you update to make Ansible run the playbook on a specific machine?
 
@@ -131,7 +131,7 @@ SSH into the control node and follow the steps below:
 - > www.PublicIP:5601 (Kibana)
 
 
-- The specific commands the user will need to run to download the playbook, update the files, 
 
-etc. ansible-playbook filebeat-playbook.yml
+
+
  
