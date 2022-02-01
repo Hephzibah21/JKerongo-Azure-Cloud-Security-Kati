@@ -8,7 +8,7 @@ Ansible YAML > Cloud Security, Bash Scripts > Linux System Administration Unit.
 
 The files in this repository were used to configure the network depicted below.
 
-![](images/NetworkDiagram2.png)
+![](images/Network_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the configulation file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -68,6 +68,7 @@ A summary of the access policies in place can be found in the table below.
 | web-1    | NO                  | 10.0.0.4             |
 | Web-2    | NO                  | 10.0.0.4             |
 | Web-3    | No                  | 10.0.0.4             |
+| Elk      | No                  | 10.0.0.4             |
 
 ### Elk Configuration
 
@@ -124,7 +125,7 @@ SSH into the control node and follow the steps below:
 
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
 
-- > file the filebeatconfig.ymml and the filebeat-install.yml
+- > In the insatll-Elk and filebeat playbooks you list the host you want the playbook to be run on. You also have to list the IP Addresses of the VMs in the /etc/ansible/host file.
 
 - Which URL do you navigate to in order to check that the ELK server is running?
 
